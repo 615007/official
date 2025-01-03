@@ -1,0 +1,22 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click TicketBookingAutomation
+        Then Navigating into the CICD Module
+    @regression
+
+Scenario:TC020_To verify whether user is able to view CICD Module
+        
+        Then User is on CICD screen
+
+Scenario:TC021_To verify whether user is able to view the Passed Jobs in Pipeline with Header in CICD Module
+        Then The user is able to View the Passed Jobs in Pipeline with Header   
+
+
+Scenario:TC022_To verify whether user is able to view the Failed Jobs in Pipeline with Header in CICD Module
+        Then The user is able to View the Failed Jobs in Pipeline with Header
+        
+Scenario:TC023_Navigate to CICD tab links 
+        Then Verify CICD sub-link is displayed  

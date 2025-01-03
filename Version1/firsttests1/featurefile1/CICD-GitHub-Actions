@@ -1,0 +1,9 @@
+Feature: Login using GitHub credentials in the Flowsource website
+
+
+Scenario:TC001_To verify whether user is able to login into Flowsource application with Git credentials
+
+Given The user is on the GitHub access login 
+When Git click on filer and user search for auto and click TicketBookingAutomation
+Then User navigate into Coderepository to Github Actions
+

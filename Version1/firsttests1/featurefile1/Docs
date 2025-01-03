@@ -1,0 +1,18 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click Jira
+   
+    @regression
+
+
+
+
+Scenario:TC003_To verify whether user is able to view details in About section of Docs module
+
+        Then User is on Docs screen
+        Then The system displays the Docs module with the list of available documents in the left pane for selected component
+        Then The system displays the Docs module with Table of Contents in the right side
+        Then The system displays the Chatbot icon in Docs module for selected component

@@ -1,0 +1,45 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click TicketBookingAutomation
+        Then Navigating into the CodeRepository Module    
+    @regression
+
+
+
+Scenario:TC014_To verify whether user is able to view CodeRepository Module
+        
+        Then User is on CodeRepository screen
+
+
+Scenario:TC015_To verify whether user is able to view details in PR Trend section of CodeRepository module
+        Then User is on PR Trend section
+        
+
+Scenario:TC016_To verify whether user is able to view details in PR Aging section of CodeRepository module
+        Then User is on PR Aging section
+        
+
+Scenario:TC017_To verify whether user is able to view the TheCognizantFoundry in CodeRepository module 
+        Then The system displays the CodeRepository module with TheCognizantFoundry
+
+        
+
+Scenario:TC018_To verify whether tabular structure is displayed with Id,TITLE,CREATOR,CREATED,LASTUPDATED headers in CodeRepository module 
+        Then The system displays the CodeRepository module with tabular structure containing Id,TITLE,CREATOR,CREATED,LASTUPDATED headers
+
+
+Scenario:TC019__Navigate to CodeRepository tab links 
+        Then Verify Code-repo 1link is displayed
+        Then Verify ALL link is displayed
+        Then Verify Search link is displayed
+        Then Verify Selecting link is displayed
+        Then Verify Clear link is displayed
+        Then Verify Closed link is displayed
+        Then Verify Open link is displayed
+        Then Verify ALL link is displayed
+        Then Verify navigate link is displayed
+
+        

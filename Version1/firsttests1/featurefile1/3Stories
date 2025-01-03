@@ -1,0 +1,42 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click TicketBookingAutomation
+        Then Navigating into the Stories Module
+    @regression
+
+
+Scenario:TC008_To verify whether user is able to view Stories Module
+
+        Then User is on Stories screen
+
+
+Scenario:TC009_To verify whether user is able to view details in Issues by Status section of Stories module
+        Then User is on Issues by Status section
+        
+
+Scenario:TC010_To verify whether user is able to view details in Open Requests by Priority section of Stories module
+        Then User is on Requests by Priority section
+        
+
+Scenario:TC011_To verify whether count of Task,Story,Bug,Epic,Feature and Chore are displayed in Stories module 
+        Then The system displays the Stories module with count of Task,Story,Bug,Epic,Feature and Chore
+
+
+
+
+Scenario:TC012_To verify whether tabular structure is displayed with Id,Story,Status,Points and Priority headers in Stories module 
+        Then The system displays the Stories module with tabular structure containing Id,Story,Status,Points and Priority headers
+
+
+
+Scenario:TC013__Navigate to Stories tab links 
+        Then Verify Upshift link1 is displayed
+        Then Verify Upshift link2 is displayed
+        Then Verify Upshift link3 is displayed
+        Then Verify Upshift link4 is displayed
+        Then Verify Upshift link5 is displayed
+        Then Verify Upshift link6 is displayed
+        Then Verify Upshift link7 is displayed

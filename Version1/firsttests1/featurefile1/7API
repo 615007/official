@@ -1,0 +1,20 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click TicketBookingAutomation
+        Then Navigating into the API Module
+    @regression
+
+
+        
+
+Scenario:TC029_To verify whether user is able to view the Provided API section with Header and API list
+        Then The user is able to View the Provided API section with Header and API list
+
+
+
+Scenario:TC030_To verify whether user is able to view the Consumed API section with Header and API list
+        Then The User is able to view the Consumed API section with Header and API list
+

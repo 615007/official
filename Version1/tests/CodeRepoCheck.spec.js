@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/');
+  const page1Promise = page.waitForEvent('popup');
+  await page.locator('li').filter({ hasText: 'LoginSign in using Open ID' }).getByRole('button').click();
+  const page1 = await page1Promise;
+  await page1.getByLabel('Username or email').fill('catalog-user');
+  await page1.getByLabel('Password', { exact: true }).click();
+  await page1.getByLabel('Password', { exact: true }).fill('flowsource1');
+  await page1.getByLabel('Show password').click();
+  await page1.getByRole('button', { name: 'Sign In' }).click();
+  await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog?filters%5Bkind%5D=component');
+  await page.getByPlaceholder('Filter').click();
+  await page.getByPlaceholder('Filter').fill('auto');
+  await page.getByRole('link', { name: 'TicketBookingAutomation' }).click();
+  await page.getByTestId('header-tab-2').click();
+  await expect(page.getByTestId('header-tab-2')).toBeVisible();
+  await expect(page.getByText('Github Pull Requests')).toBeVisible();
+  await expect(page.getByText('PR Trend')).toBeVisible();
+  await expect(page.getByRole('img').nth(2)).toBeVisible();
+  await expect(page.getByText('PR Aging')).toBeVisible();
+  await expect(page.getByRole('img').nth(3)).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'TheCognizantFoundry/' })).toBeVisible();
+  await expect(page.locator('div').filter({ hasText: /^TheCognizantFoundry\/TicketBooking$/ }).first()).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'ID' })).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'TITLE' })).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'CREATOR' })).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'CREATED' })).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'LAST UPDATED' })).toBeVisible();
+});

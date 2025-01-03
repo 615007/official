@@ -1,0 +1,8 @@
+Feature: Login using GitHub credentials in the Flowsource website
+
+
+Scenario:TC001_To verify whether user is able to login into Flowsource application with Git credentials
+
+Given The user is on the GitHub access login2
+When User navigate into Overview to Github viewsource2
+

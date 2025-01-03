@@ -1,0 +1,36 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/');
+  const page1Promise = page.waitForEvent('popup');
+  await page.locator('li').filter({ hasText: 'LoginSign in using Open ID' }).getByRole('button').click();
+  const page1 = await page1Promise;
+  await page1.getByLabel('Username or email').fill('catalog-user');
+  await page1.getByLabel('Password', { exact: true }).click();
+  await page1.getByLabel('Password', { exact: true }).fill('flowsource1');
+  await page1.getByRole('button', { name: 'Sign In' }).click();
+  await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog?filters%5Bkind%5D=component');
+  await page.getByRole('link', { name: 'BitbucketTicketBooking', exact: true }).click();
+  await page.getByTestId('header-tab-3').click();
+  await page.getByRole('button', { name: 'deployment-to-prod' }).click();
+  const page2Promise = page.waitForEvent('popup');
+  await page.getByRole('link', { name: '#47' }).click();
+  const page2 = await page2Promise;
+  await page2.getByTestId('ContextualNavigation').getByRole('link', { name: 'Source' }).click();
+  await page2.getByRole('link', { name: 'Commits' }).click();
+  await page2.getByRole('link', { name: 'Branches' }).click();
+  await page2.getByRole('link', { name: 'Pull requests' }).click();
+  await page2.getByTestId('ContextualNavigation').getByRole('link', { name: 'Pipelines' }).click();
+  await page2.getByTestId('profile-button').click();
+  await page2.getByRole('link', { name: 'Log in' }).click();
+  await page2.getByTestId('username').fill('rajesh.vijay@cognizant.com');
+  await page2.getByRole('button', { name: 'Continue' }).click();
+  await page2.getByTestId('password').fill('Rv55861$rv55861');
+  await page2.getByRole('button', { name: 'Log in' }).click();
+  await page2.getByTestId('Content').getByRole('img').nth(1).click();
+  await page2.getByRole('link', { name: 'FlowsourcePlatform Avatar' }).click();
+  await page2.getByRole('link', { name: 'Repositories' }).click();
+  await page2.getByRole('link', { name: 'ticketbooking', exact: true }).click();
+  await page2.getByTestId('ContextualNavigation').getByRole('link', { name: 'Pipelines' }).click();
+  await page2.getByTestId('horizontal-nav-help-button').click();
+});

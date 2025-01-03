@@ -1,0 +1,111 @@
+// Scenario: TC006_Navigate to Overview menu and check About section # tests\featurefiles\placeorder.feature:55        
+ 
+ /* Then('Verify Overview menu link is displayed', async () => {
+  await Flowsource_HomeMethods.Overview_Tab();
+});
+
+  Then('Verify View Source link is displayed', async () => {
+    await Flowsource_HomeMethods.View_Source_Tab();
+  });
+ 
+  Then('Verify Techdocs link is displayed', async () => {
+    await Flowsource_HomeMethods.View_TechDocs();
+  });
+
+
+ 
+ Then('Verify Description lable is displayed', async () => {
+     await Flowsource_HomeMethods.Description_Overview();
+  });
+ 
+ 
+  Then('Verify Owner lable is displayed', async () => {
+    await Flowsource_HomeMethods.Owner_Overview();
+  });
+ 
+  Then('Verify System lable is displayed', async () => {
+    await Flowsource_HomeMethods.System_Overview();
+  });
+ 
+  Then('Verify Parent component lable is displayed', async () => {
+    await Flowsource_HomeMethods.Parent_Component_Overview();
+  });
+ 
+  Then('Verify type lable is displayed', async () => {
+    await Flowsource_HomeMethods.Type_Overview();
+  });
+ 
+ 
+  Then('Verify Life Cycle  lable is displayed', async () => {
+    await Flowsource_HomeMethods.Lifecycle_Overview();
+  });
+ 
+ 
+  Then('Verify Tags lable is displayed', async () => {
+    await Flowsource_HomeMethods.Tags_Overview();
+  });
+
+
+
+
+  async View_Source_Tab(){
+    await page.waitForTimeout(2000);
+    await expect(page.getByRole('link', { name: 'View Source , Opens in a new' })).to.exist;
+    const page2Promise = page.waitForEvent('popup');
+    await page.getByRole('link', { name: 'View Source , Opens in a new' }).click();
+    const page2 = await page2Promise;
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');
+    };
+    async View_TechDocs(){
+    await page.waitForTimeout(2000);
+    await expect(page.getByRole('link', { name: 'View TechDocs' })).to.exist;
+    await page.getByRole('link', { name: 'View TechDocs' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');         
+    };
+
+    async Description_Overview(){
+    await expect(page.getByRole('heading', { name: 'Description' })).to.exist;
+    };
+    async Owner_Overview(){
+    await expect(page.getByRole('article').getByRole('link', { name: 'Guest User' })).to.exist;
+    await page.getByRole('article').getByRole('link', { name: 'Guest User' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');
+    };
+    
+    async System_Overview(){
+    await expect(page.getByRole('link', { name: 'theaterbooking' })).to.exist;
+    await page.getByRole('link', { name: 'theaterbooking' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');
+    };
+
+    async Parent_Component_Overview(){
+    await expect(page.getByRole('heading', { name: 'Parent Component' })).to.exist;
+    await page.getByRole('link', { name: 'TheatreBookingWeb' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBooking');
+    };
+
+    async Type_Overview(){
+    await expect(page.getByRole('heading', { name: 'Type' })).toBeVisible();
+    
+    };
+
+    async Lifecycle_Overview(){
+    await expect(page.getByRole('heading', { name: 'Lifecycle' })).toBeVisible();
+    };
+
+    async Tags_Overview(){
+    await expect(page.getByRole('heading', { name: 'Tags' })).toBeVisible();
+    };
+    
+    async Source_code_Overview(){
+    await expect(page.getByRole('link', { name: 'Source Code , Opens in a new' })).to.exist;
+    const page3Promise = page.waitForEvent('popup');
+    await page.getByRole('link', { name: 'Source Code , Opens in a new' }).click();
+    const page3 = await page3Promise;
+    };
+    async Has_subcomponents_Overview(){
+    await page.locator('div').filter({ hasText: /^Has subcomponents$/ }).first().click();
+    await expect(page.getByRole('heading', { name: 'Has subcomponents' })).to.exist;
+
+    };
+*/

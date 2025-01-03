@@ -1,0 +1,80 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click TicketBookingAutomation
+    @regression
+    
+
+
+Scenario:TC001_Flowsource_Loginpage
+ 
+        Then Verify Overview menu link is displayed
+    	Then Verify Stories menu link is displayed
+        Then Verify Code Repository menu link is displayed
+        Then Verify CICD link is displayed
+        Then Verify Code Quality menu link is displayed
+        Then Verify API link is displayed
+        Then Verify Docs menu link is displayed
+        Then Verify Dependencies menu link is displayed
+        Then Verify Well Architected menu link is displayed
+        Then Verify Dora metrics menu link is displayed
+        Then Verify Finops Metrics menu link is displayed
+ 
+ 
+        
+Scenario:TC002_Navigate to Overview menu and check About section
+ 
+        Then Verify View Source link is displayed
+        Then Verify Techdocs link is displayed
+        Then Verify Owner lable is displayed
+        Then Verify System lable is displayed
+        Then Verify Parent component lable is displayed
+        Then Verify View Graph lable is displayed
+        Then Verify Source Code lable is displayed
+        Then Verify Deployed Application lable is displayed
+        Then Verify Deployed Shows lable is displayed
+        Then Verify Deployed Select lable is displayed
+
+        
+ Scenario:TC003_Navigate to Stories menu and check About section
+        Then Verify Upshift link1 is displayed
+        Then Verify Upshift link2 is displayed
+        Then Verify Upshift link3 is displayed
+        Then Verify Upshift link4 is displayed
+        Then Verify Upshift link5 is displayed
+        Then Verify Upshift link6 is displayed
+        Then Verify Upshift link7 is displayed
+
+
+ Scenario:TC004_Navigate to Code repo menu and check About section
+        Then Verify Code-repo 1link is displayed
+        Then Verify ALL link is displayed
+        Then Verify Search link is displayed
+        Then Verify Selecting link is displayed
+        Then Verify Clear link is displayed
+        Then Verify Closed link is displayed
+        Then Verify Open link is displayed
+        Then Verify ALL link is displayed
+        Then Verify navigate link is displayed
+        
+
+Scenario:TC005_Navigate to Code Quality menu and all menu sections
+        Then Verify CQ-Header  link is displayed
+    	Then Verify CQ-Sub menu link is displayed
+        Then Verify CQ-Firstchart link is displayed
+        Then Verify CQ-Secoundchart link is displayed
+    
+
+
+
+Scenario:TC006_Navigate to Dependencies menu and all menu sections
+        Then Verify Docs-Edit  link is displayed 
+        Then Verify Continue  link is displayed
+
+
+
+Scenario:TC007_Navigate to CICD menu and all menu sections
+        Then Verify CICD sub-link is displayed        
+

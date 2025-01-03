@@ -1,0 +1,16 @@
+Feature: Login using GitHub credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        
+    @regression
+
+
+
+
+Scenario:TC006_To verify whether user is able to view the Jenkins tool
+ 
+        Then User click on filer and user search for auto and click TicketBooking12072024
+        Then Verify Jenkins link is displayed
+        Then Verify Jenkins profile log is displayed

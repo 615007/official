@@ -1,0 +1,8 @@
+Feature: Login using GitHub credentials in the Flowsource website
+
+
+
+Scenario:TC007_To verify whether user is able to view Docs into GitHub Editing tool
+Given The user is on the GitHub access login 
+When Git click on filer and user search for auto and click TicketBookingAutomation
+Then User navigate into Docs to GitHub Editing

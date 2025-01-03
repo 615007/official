@@ -1,0 +1,13 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click TicketBookingAutomation
+        
+    @regression
+
+
+Scenario:TC003_To verify whether user is able to view the Stories tool
+       
+        Then Verify Jira Story is displayed

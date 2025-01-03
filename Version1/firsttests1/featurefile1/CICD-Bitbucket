@@ -1,0 +1,15 @@
+Feature: Login using GitHub credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        
+    @regression
+
+
+
+Scenario:TC005_To verify whether user is able to view the Bitbucket CI/CD tool
+ 
+        Then User click on filer and user search for auto and click BitbucketTicketBooking
+        Then Verify Bitbucket CICD link is displayed
+        Then Verify Bitbucket profile log is displayed

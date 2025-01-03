@@ -1,0 +1,38 @@
+Feature: Login using valid credentials in the Flowsource website
+
+Background:
+        Given User in the website and click on the LoginSign in using Open ID of the flowsource website
+        When User enter the credentials and click the signin       
+        Then User click on filer and user search for auto and click TicketBookingAutomation
+        Then Navigating into the CodeQaulity Module
+    @regression
+
+
+Scenario:TC024_To verify whether user is able to view CodeQaulity Module
+        
+        Then User is on CodeQaulity screen
+
+
+
+Scenario:TC025_To verify whether user is able to view the last scan date Quality gate status
+        Then The user is able to View the last scan date and Quality gate status
+
+
+
+
+Scenario:TC026_To verify whether user is able to view the field Bugs Vulnerabilities Code smells Coverage Duplications and Hotspots Reviewed
+        Then The user is able to View the field Bugs Vulnerabilities Code smells Coverage Duplications and Hotspots Reviewed
+
+
+
+
+Scenario:TC027_To verify whether user is able to view the Quality gate trend under Header All scans
+        Then The user is able to View the Quality gate trend under Header All scans
+
+
+
+
+Scenario:TC028_To verify whether user is able to view Bugs and Code Smells and Vulnerabilities Trend Chart under Header All scans
+        Then The user is able to view Bugs and Code Smells and Vulnerabilities Trend Chart under Header All scans
+   
+

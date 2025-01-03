@@ -1,0 +1,87 @@
+//Scenario:  TC002_Navigate to Overview menu and check About section
+
+//Then('User click on filer and user search for auto and click TicketBookingAutomation', async () => {
+  //  console.log('User click on filer and user search for auto and click TicketBookingAutomation');
+
+/*
+
+Then('Verify View Source link is displayed', async ()=> {
+    console.log('Verify View Source link is displayed');
+    await page.waitForTimeout(2000);
+    await expect(page.getByRole('link', { name: 'View Source , Opens in a new' })).to.exist;
+    const page2Promise = page.waitForEvent('popup');
+    await page.getByRole('link', { name: 'View Source , Opens in a new' }).click();
+    const page2 = await page2Promise;
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');
+}
+
+    
+Then('Verify Techdocs link is displayed', async ()=> {
+    console.log('Verify Techdocs link is displayed');
+    await page.waitForTimeout(2000);
+    await expect(page.getByRole('link', { name: 'View TechDocs' })).to.exist;
+    await page.getByRole('link', { name: 'View TechDocs' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');         
+
+}
+
+
+Then('Verify Description lable is displayed', async ()=> {
+    console.log('Then Verify Description lable is displayed');
+    await expect(page.getByRole('heading', { name: 'Description' })).to.exist;
+
+}
+
+Then('Verify Owner lable is displayed', async ()=> {
+    console.log('Verify Owner lable is displayed');
+    await expect(page.getByRole('article').getByRole('link', { name: 'Guest User' })).to.exist;
+    await page.getByRole('article').getByRole('link', { name: 'Guest User' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');
+   
+}   
+
+Then('Verify System lable is displayed', async ()=> {
+    console.log('Verify System lable is displayed');
+    await expect(page.getByRole('link', { name: 'theaterbooking' })).to.exist;
+    await page.getByRole('link', { name: 'theaterbooking' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBookingAutomation');
+
+
+})
+
+Then('Verify Parent component lable is displayed', async()=>{
+    console.log('Verify Parent component lable is displayed');
+    await expect(page.getByRole('heading', { name: 'Parent Component' })).to.exist;
+    await page.getByRole('link', { name: 'TheatreBookingWeb' }).click();
+    await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog/default/component/TicketBooking');
+
+})
+
+Then('Verify type lable is displayed', async()=>{
+    console.log('Verify type lable is displayed');
+    await expect(page.getByRole('heading', { name: 'Type' })).toBeVisible();
+    
+})
+
+
+Then('Verify Life Cycle  lable is displayed', async()=> {
+    console.log('Verify Life Cycle  lable is displayed');
+    await expect(page.getByRole('heading', { name: 'Lifecycle' })).toBeVisible();
+
+
+
+})
+
+Then('Verify Tags lable is displayed', async()=> {
+    console.log('Verify Tags lable is displayed');
+    await expect(page.getByRole('heading', { name: 'Tags' })).toBeVisible();
+
+}
+
+
+
+});
+
+
+
+*/

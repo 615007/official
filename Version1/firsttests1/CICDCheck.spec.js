@@ -1,0 +1,36 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/');
+  const page1Promise = page.waitForEvent('popup');
+  await page.locator('li').filter({ hasText: 'LoginSign in using Open ID' }).getByRole('button').click();
+  const page1 = await page1Promise;
+  await page1.getByLabel('Username or email').fill('catalog-user');
+  await page1.getByLabel('Username or email').press('Tab');
+  await page1.getByLabel('Password', { exact: true }).fill('flowsource1');
+  await page1.getByLabel('Show password').click();
+  await page1.getByRole('button', { name: 'Sign In' }).click();
+  await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog');
+  await page.goto('http://a31ab0521b7614fc494b75314e386461-307954604.ap-southeast-1.elb.amazonaws.com:7007/catalog?filters%5Bkind%5D=component');
+  await page.getByPlaceholder('Filter').click();
+  await page.getByPlaceholder('Filter').fill('auto');
+  await page.getByRole('link', { name: 'TicketBookingAutomation' }).click();
+  await page.getByTestId('header-tab-3').click();
+  await expect(page.getByTestId('header-tab-3')).toBeVisible();
+  await expect(page.getByText('TheCognizantFoundry/')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Basic workflow demo' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'TicketBooking-Pipeline' })).toBeVisible();
+  await page.getByRole('button', { name: 'Basic workflow demo' }).click();
+  await expect(page.getByRole('link', { name: 'Update catalog-info.yaml' }).first()).toBeVisible();
+  await expect(page.getByText('ID: 10296801390')).toBeVisible();
+  await expect(page.getByText('11s').first()).toBeVisible();
+  await page.getByLabel('Basic workflow demo').locator('div').filter({ hasText: 'Update catalog-info.yamlID: 1029680139011sUpdate catalog-info.yamlID:' }).first().click();
+  await expect(page.getByLabel('Basic workflow demo').locator('div').filter({ hasText: 'Update catalog-info.yamlID: 1029680139011sUpdate catalog-info.yamlID:' }).first()).toBeVisible();
+  await page.getByRole('button', { name: 'Basic workflow demo' }).click();
+  await page.getByRole('button', { name: 'TicketBooking-Pipeline' }).click();
+  await expect(page.getByRole('link', { name: 'Update pipeline.yml' }).first()).toBeVisible();
+  await expect(page.getByText('ID: 10447066139')).toBeVisible();
+  await expect(page.getByText('4m 8s')).toBeVisible();
+  await expect(page.getByLabel('TicketBooking-Pipeline').locator('div').filter({ hasText: 'Update pipeline.ymlID: 104470661394m 8sUpdate catalog-info.yamlID:' }).nth(3)).toBeVisible();
+  await page.getByRole('button', { name: 'TicketBooking-Pipeline' }).click();
+});
